@@ -1,13 +1,13 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Changelog for package roslint
+Changelog for package roscpplint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 0.11.0 (2016-03-23)
 -------------------
 * Add Alex Henning as maintainer
 * Moved default flags for cpplint from cmake file to cpplint script to have centralized place for such flag.
-* Set the python max-line-length to 120, allows `rosrun roslint pep8` to run with the expected settings.
-* Fixes issue #40 <https://github.com/ros/roslint/issues/40>.
+* Set the python max-line-length to 120, allows `rosrun roscpplint pep8` to run with the expected settings.
+* Fixes issue #40 <https://github.com/ros/roscpplint/issues/40>.
 * Contributors: Alex Henning, Andriy Petlovanyy, Mike Purvis
 
 0.10.0 (2015-08-07)
@@ -25,14 +25,14 @@ Changelog for package roslint
 
 0.9.2 (2014-03-31)
 ------------------
-* Better implementation of roslint_add_test
+* Better implementation of roscpplint_add_test
 * Simple implementation of XML results output
-* roslint roslints itself
+* roscpplint roscpplints itself
 * Contributors: Mike Purvis
 
 0.9.1 (2014-02-18)
 ------------------
-* Add roslint_add_test function
+* Add roscpplint_add_test function
 * Run the include-line checks with errors suppressed. This kills spurious build/include_what_you_use errors.
 * Contributors: Mike Purvis
 
@@ -40,13 +40,13 @@ Changelog for package roslint
 ------------------
 * Allow a trailing semicolon after closing brace.
 * Add more tolerance for braces as array initializers, and eliminate the warning about access control labels.
-* Rename python library to roslint, to play better.
-* Use templated extras file to find roslint scripts without rosrun. 
-* Max length override for pep8; remove roslint custom shout.
+* Rename python library to roscpplint, to play better.
+* Use templated extras file to find roscpplint scripts without rosrun. 
+* Max length override for pep8; remove roscpplint custom shout.
 * Add some overrides in an effort to comply better with ROS C++ Style.
 * Contributors: Mike Purvis
 
 0.0.1 (2013-10-17)
 ------------------
-* Basic initial release, with roslint_python, roslint_cpp, and roslint_custom macros included.
+* Basic initial release, with roscpplint_python, roscpplint_cpp, and roscpplint_custom macros included.
 * pep8 and cpplint linters packaged-in.
