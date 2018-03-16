@@ -12,5 +12,5 @@ except ImportError:
 # Adding default flags to cpplint.
 # You can override them using global CMAKE variable roscpplint_CPP_OPTS.
 # The index of injected argument is 1 because 0 is program's name
-sys.argv.insert(1, "--filter=-runtime/references")
+sys.argv.insert(1, "--filter=-runtime/references,-legal")
 cpplint_wrapper.main()
