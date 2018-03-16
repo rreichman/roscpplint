@@ -12,5 +12,27 @@ except ImportError:
 # Adding default flags to cpplint.
 # You can override them using global CMAKE variable roscpplint_CPP_OPTS.
 # The index of injected argument is 1 because 0 is program's name
-sys.argv.insert(1, "--filter=-runtime/references,-legal")
+filters = [
+    '-build/c++11',
+    '-build/header_guard',
+    '-build/include',
+    '-build/namespaces',
+    # Pointless legal headers.
+    '-legal',
+    # Doesn't work with our toolchain.
+    '-readability/casting',
+    '-readability/namespace',
+    '-readability/todo',
+    # Stylistic issue (maybe) with single-arg constructors.
+    '-runtime/explicit',
+    # Forces you not to use long long.
+    '-runtime/int',
+    # Suggests use of allocation-safe sfprintn.
+    '-runtime/printf',
+    '-runtime/string',
+    # Gives a lot of false positives. May want to reenable at some point.
+    '-runtime/threadsafe_fn',
+    '-runtime/references',
+]
+sys.argv.insert(1, "--filter=" + ','.join(filters))
 cpplint_wrapper.main()
